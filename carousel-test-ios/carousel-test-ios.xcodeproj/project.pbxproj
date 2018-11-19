@@ -12,14 +12,8 @@
 		6BE97BBB21A37158008B4DBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE97BB921A37158008B4DBB /* Main.storyboard */; };
 		6BE97BBD21A37159008B4DBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BE97BBC21A37159008B4DBB /* Assets.xcassets */; };
 		6BE97BC021A37159008B4DBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE97BBE21A37159008B4DBB /* LaunchScreen.storyboard */; };
-		6BE97BD321A371B0008B4DBB /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE97BC821A371B0008B4DBB /* TextStyles.swift */; };
-		6BE97BD421A371B0008B4DBB /* CGSize+Resizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE97BC921A371B0008B4DBB /* CGSize+Resizing.swift */; };
-		6BE97BD521A371B0008B4DBB /* Shadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE97BCA21A371B0008B4DBB /* Shadows.swift */; };
-		6BE97BD621A371B0008B4DBB /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE97BCB21A371B0008B4DBB /* TextStyle.swift */; };
-		6BE97BD721A371B0008B4DBB /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE97BCC21A371B0008B4DBB /* Shadow.swift */; };
 		6BE97BD921A371B0008B4DBB /* LonaCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE97BCF21A371B0008B4DBB /* LonaCollectionView.swift */; };
 		6BE97BDA21A371B0008B4DBB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE97BD021A371B0008B4DBB /* Colors.swift */; };
-		6BE97BDB21A371B0008B4DBB /* LonaControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE97BD121A371B0008B4DBB /* LonaControlView.swift */; };
 		6BE97BDC21A371B0008B4DBB /* LonaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE97BD221A371B0008B4DBB /* LonaViewModel.swift */; };
 		6BE97BDF21A3746A008B4DBB /* VerticalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE97BDD21A3746A008B4DBB /* VerticalItem.swift */; };
 		6BE97BE021A3746A008B4DBB /* HorizontalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE97BDE21A3746A008B4DBB /* HorizontalItem.swift */; };
@@ -33,14 +27,8 @@
 		6BE97BBC21A37159008B4DBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BE97BBF21A37159008B4DBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BE97BC121A37159008B4DBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6BE97BC821A371B0008B4DBB /* TextStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
-		6BE97BC921A371B0008B4DBB /* CGSize+Resizing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+Resizing.swift"; sourceTree = "<group>"; };
-		6BE97BCA21A371B0008B4DBB /* Shadows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shadows.swift; sourceTree = "<group>"; };
-		6BE97BCB21A371B0008B4DBB /* TextStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
-		6BE97BCC21A371B0008B4DBB /* Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
 		6BE97BCF21A371B0008B4DBB /* LonaCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LonaCollectionView.swift; sourceTree = "<group>"; };
 		6BE97BD021A371B0008B4DBB /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		6BE97BD121A371B0008B4DBB /* LonaControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LonaControlView.swift; sourceTree = "<group>"; };
 		6BE97BD221A371B0008B4DBB /* LonaViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LonaViewModel.swift; sourceTree = "<group>"; };
 		6BE97BDD21A3746A008B4DBB /* VerticalItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalItem.swift; sourceTree = "<group>"; };
 		6BE97BDE21A3746A008B4DBB /* HorizontalItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalItem.swift; sourceTree = "<group>"; };
@@ -90,15 +78,9 @@
 		6BE97BC721A371B0008B4DBB /* Generated */ = {
 			isa = PBXGroup;
 			children = (
-				6BE97BC821A371B0008B4DBB /* TextStyles.swift */,
-				6BE97BC921A371B0008B4DBB /* CGSize+Resizing.swift */,
-				6BE97BCA21A371B0008B4DBB /* Shadows.swift */,
-				6BE97BCB21A371B0008B4DBB /* TextStyle.swift */,
-				6BE97BCC21A371B0008B4DBB /* Shadow.swift */,
 				6BE97BCD21A371B0008B4DBB /* components */,
 				6BE97BCF21A371B0008B4DBB /* LonaCollectionView.swift */,
 				6BE97BD021A371B0008B4DBB /* Colors.swift */,
-				6BE97BD121A371B0008B4DBB /* LonaControlView.swift */,
 				6BE97BD221A371B0008B4DBB /* LonaViewModel.swift */,
 			);
 			path = Generated;
@@ -185,18 +167,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BE97BDC21A371B0008B4DBB /* LonaViewModel.swift in Sources */,
-				6BE97BDB21A371B0008B4DBB /* LonaControlView.swift in Sources */,
-				6BE97BD621A371B0008B4DBB /* TextStyle.swift in Sources */,
 				6BE97BDA21A371B0008B4DBB /* Colors.swift in Sources */,
-				6BE97BD321A371B0008B4DBB /* TextStyles.swift in Sources */,
-				6BE97BD521A371B0008B4DBB /* Shadows.swift in Sources */,
 				6BE97BDF21A3746A008B4DBB /* VerticalItem.swift in Sources */,
 				6BE97BB821A37158008B4DBB /* ViewController.swift in Sources */,
 				6BE97BE021A3746A008B4DBB /* HorizontalItem.swift in Sources */,
 				6BE97BB621A37158008B4DBB /* AppDelegate.swift in Sources */,
-				6BE97BD721A371B0008B4DBB /* Shadow.swift in Sources */,
 				6BE97BD921A371B0008B4DBB /* LonaCollectionView.swift in Sources */,
-				6BE97BD421A371B0008B4DBB /* CGSize+Resizing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

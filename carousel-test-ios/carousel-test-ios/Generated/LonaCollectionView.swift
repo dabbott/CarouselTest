@@ -141,8 +141,6 @@ public class LonaCollectionView: UICollectionView, UICollectionViewDataSource, U
     delegate = self
     dataSource = self
 
-    register(LonaNestedCollectionViewCell.self, forCellWithReuseIdentifier: LonaNestedCollectionViewCell.identifier)
-    
     register(HorizontalItemCell.self, forCellWithReuseIdentifier: HorizontalItemCell.identifier)
     register(VerticalItemCell.self, forCellWithReuseIdentifier: VerticalItemCell.identifier)
   }
@@ -209,11 +207,6 @@ public class LonaCollectionView: UICollectionView, UICollectionViewDataSource, U
     let scrollDirection = self.scrollDirection
 
     switch (item.type) {
-    case LonaNestedCollectionViewCell.identifier:
-      if let cell = cell as? LonaNestedCollectionViewCell, let item = item as? LonaCollectionView.Model {
-        cell.parameters = item.parameters
-        cell.scrollDirection = scrollDirection
-      }
     case HorizontalItemCell.identifier:
       if let cell = cell as? HorizontalItemCell, let item = item as? HorizontalItem.Model {
         cell.parameters = item.parameters
@@ -231,42 +224,11 @@ public class LonaCollectionView: UICollectionView, UICollectionViewDataSource, U
     return cell
   }
 
-  // MARK: - Delegate
-
-  public var onSelectItem: ((LonaViewModel) -> Void)?
-
-  public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    let item = items[indexPath.row]
-    let cell = cellForItem(at: indexPath)
-
-    switch (item.type) {
-    
-    default:
-      break
-    }
-
-    onSelectItem?(item)
-  }
-
-  // MARK: Scrolling
-
-  override public func touchesShouldCancel(in view: UIView) -> Bool {
-    if view is LonaControl {
-      return true
-    }
-
-    return super.touchesShouldCancel(in: view)
-  }
-
   // MARK: Private
 
-  private func updateAlwaysBounce(for scrollDirection: ScrollDirection) {
-    alwaysBounceVertical = scrollDirection == .vertical
-    alwaysBounceHorizontal = scrollDirection == .horizontal
-  }
-
   private func parametersDidChange(oldValue: Parameters) {
-    updateAlwaysBounce(for: parameters.scrollDirection)
+    alwaysBounceVertical = parameters.scrollDirection == .vertical
+    alwaysBounceHorizontal = parameters.scrollDirection == .horizontal
     contentInset = parameters.padding
 
     switch parameters.scrollDirection {
@@ -321,74 +283,7 @@ extension LonaCollectionView {
   }
 }
 
-// MARK: - Model
-
-extension LonaCollectionView {
-  public struct Model: LonaViewModel {
-    public var parameters: Parameters
-    public var type: String {
-      return "LonaCollectionView"
-    }
-
-    public init(_ parameters: Parameters) {
-      self.parameters = parameters
-    }
-
-    public init(
-      items: [LonaViewModel],
-      scrollDirection: UICollectionView.ScrollDirection,
-      padding: UIEdgeInsets = .zero,
-      itemSpacing: CGFloat = 0,
-      fixedSize: CGFloat? = nil)
-    {
-      self.init(
-        Parameters(
-          items: items,
-          scrollDirection: scrollDirection,
-          padding: padding,
-          itemSpacing: itemSpacing,
-          fixedSize: fixedSize))
-    }
-
-    public init() {
-      self.init(items: [], scrollDirection: .vertical)
-    }
-  }
-}
-
 // MARK: - Cell Classes
-
-public class LonaNestedCollectionViewCell: LonaCollectionViewCell<LonaCollectionView> {
-  public var parameters: LonaCollectionView.Parameters {
-    get { return view.parameters }
-    set { view.parameters = newValue }
-  }
-  public static var identifier: String {
-    return "LonaCollectionView"
-  }
-  override public func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-    let preferredLayoutAttributes = super.preferredLayoutAttributesFitting(layoutAttributes)
-
-    if let fixedSize = parameters.fixedSize {
-      switch scrollDirection {
-      case .vertical:
-        preferredLayoutAttributes.bounds.size.height = fixedSize
-      case .horizontal:
-        preferredLayoutAttributes.bounds.size.width = fixedSize
-      }
-    }
-
-    return preferredLayoutAttributes
-  }
-
-  public override func layoutSubviews() {
-    super.layoutSubviews()
-
-    if (contentView.bounds != view.bounds) {
-      view.collectionViewLayout.invalidateLayout()
-    }
-  }
-}
 
 public class HorizontalItemCell: LonaCollectionViewCell<HorizontalItem> {
   public var parameters: HorizontalItem.Parameters {
