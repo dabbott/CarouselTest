@@ -152,7 +152,10 @@ public class LonaCollectionView: UICollectionView, UICollectionViewDataSource, U
     collectionViewLayout layout: UICollectionViewLayout = LonaCollectionViewListLayout()) {
     self.init(frame: .zero, collectionViewLayout: layout)
 
+    let oldParameters = self.parameters
     self.parameters = parameters
+
+    parametersDidChange(oldValue: oldParameters)
   }
 
   public convenience init(
@@ -281,9 +284,9 @@ public class LonaCollectionView: UICollectionView, UICollectionViewDataSource, U
     reloadData()
     layoutIfNeeded()
 
-    contentOffset = CGPoint(
-      x: contentOffset.x - parameters.padding.left + oldValue.padding.left,
-      y: contentOffset.y - parameters.padding.top + oldValue.padding.top)
+//    contentOffset = CGPoint(
+//      x: contentOffset.x - parameters.padding.left + oldValue.padding.left,
+//      y: contentOffset.y - parameters.padding.top + oldValue.padding.top)
   }
 }
 

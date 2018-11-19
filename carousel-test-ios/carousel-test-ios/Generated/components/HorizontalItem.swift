@@ -44,16 +44,14 @@ public class HorizontalItem: UIView {
     translatesAutoresizingMaskIntoConstraints = false
     innerView.translatesAutoresizingMaskIntoConstraints = false
 
-    let innerViewWidthAnchorParentConstraint = innerView.widthAnchor.constraint(lessThanOrEqualTo: widthAnchor)
+    let widthAnchorConstraint = widthAnchor.constraint(equalToConstant: 30)
     let innerViewTopAnchorConstraint = innerView.topAnchor.constraint(equalTo: topAnchor)
     let innerViewBottomAnchorConstraint = innerView.bottomAnchor.constraint(equalTo: bottomAnchor)
     let innerViewLeadingAnchorConstraint = innerView.leadingAnchor.constraint(equalTo: leadingAnchor)
     let innerViewWidthAnchorConstraint = innerView.widthAnchor.constraint(equalToConstant: 30)
 
-    innerViewWidthAnchorParentConstraint.priority = UILayoutPriority.defaultLow
-
     NSLayoutConstraint.activate([
-      innerViewWidthAnchorParentConstraint,
+      widthAnchorConstraint,
       innerViewTopAnchorConstraint,
       innerViewBottomAnchorConstraint,
       innerViewLeadingAnchorConstraint,

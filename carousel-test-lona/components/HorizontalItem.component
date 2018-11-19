@@ -48,7 +48,8 @@
     ],
     "id" : "Container",
     "params" : {
-      "flex" : 1
+      "flex" : 1,
+      "width" : 30
     },
     "type" : "Lona:View"
   }
