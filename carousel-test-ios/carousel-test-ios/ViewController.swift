@@ -32,8 +32,7 @@ class ViewController: UIViewController {
     verticalCarousel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
     verticalCarousel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor).isActive = true
 
-//    verticalCarousel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
-    verticalCarousel.widthAnchor.constraint(equalToConstant: 50).isActive = true
+    verticalCarousel.widthAnchor.constraint(equalToConstant: 49).isActive = true
 
     // Horizontal Carousel
 
@@ -55,8 +54,7 @@ class ViewController: UIViewController {
     horizontalCarousel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
     horizontalCarousel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
 
-//    horizontalCarousel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-    horizontalCarousel.heightAnchor.constraint(equalToConstant: 50).isActive = true
+    horizontalCarousel.heightAnchor.constraint(equalToConstant: 49).isActive = true
   }
 }
 
