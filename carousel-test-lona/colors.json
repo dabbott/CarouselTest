@@ -1,0 +1,16 @@
+{
+  "colors" : [
+    {
+      "comment" : "",
+      "id" : "primary",
+      "name" : "Primary",
+      "value" : "rgba(27,160,205,1.0)"
+    },
+    {
+      "comment" : "",
+      "id" : "secondary",
+      "name" : "Secondary",
+      "value" : "rgba(178,135,251,1.0)"
+    }
+  ]
+}
